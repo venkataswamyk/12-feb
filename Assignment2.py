@@ -1,0 +1,29 @@
+oil=150
+spices=30
+flour=359
+drinks=590
+bottles=245
+cname=input('enter customer name:')
+cphone=input('enter customer phone number:')
+oq=int(input('enter the no of oil packets:'))
+sq=int(input('enter the no of spices packets:'))
+fq=int(input('enter the no of flour packets:'))
+dq=int(input('enter the no of drink packets:'))
+bq=int(input('enter the no of bottle packets:'))
+bill=(oil*oq)+(spices*sq)+(flour*fq)+(drink*dq)+(bottles*bq)
+if bill>=5000:
+    dis=bill*10/100
+    tax=0
+if bill>=3000:
+    dis=bill*8/100
+    tax=0
+elif bill>=2000:
+    dis=bill*5/100
+if bill>=1000:
+    dis=bill*3/100
+if bill>=3000:
+    tax=bill*10/100
+else:
+    tax=bill*18/100
+    mainbill=bill-dis+tax
+    print('bill amount:',mainbill)
